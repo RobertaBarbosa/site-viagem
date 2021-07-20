@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #e9ecef;
+}
+
+a {
+  text-decoration: none; /*tirar o sublinhado dos links*/
+  color: inherit; /*tirar o azul dos links*/
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  /* 100vh é o tamanho total da tela - 150px, serve para ajustar a imagem */
+  height: calc(100vh - 150px); /*camada colorida na img*/
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    no-repeat center/cover url('images/rj.jpg');
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header nav a:hover {
+  color: #fb8500;
+}
+
+header nav ul {
+  list-style: none; /* para tirar o ponto do lado das palavras no menu */
+  display: flex; /* para deixar os links um do lado do outro */
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+.header-content {
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.header-content h1 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+header button {
+  color: white;
+  background-color: transparent;
+  border: thin solid white;
+  padding: 20px 25px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+header button:hover {
+  border: thin solid #fb8500;
+  color: #fb8500;
+}
+
+/*SESSÃO PACOTES*/
+.pacotes {
+  padding: 15px;
+}
+
+.pacotes .pacotes-cards {
+  display: flex;
+  margin: auto;
+  max-width: 950px;
+  flex-wrap: wrap; /*"quebrar" o card quando for diminuindo a tela*/
+  justify-content: center;
+}
+
+.pacotes .pacotes-title {
+  width: 100%;
+  text-align: center;
+  margin: 25px 0;
+  color: #023047;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+}
+
+.pacotes .card {
+  width: 250px;
+  height: 377px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px;
+  object-fit: cover; /*ajustar a imagem no card*/
+  box-shadow: 5px 6px 14px -1px #cccccc;
+}
+
+.pacotes .card-image {
+  width: 250px;
+  height: 210px;
+  border-radius: 24px 0 0 0;
+}
+
+.pacotes .card-content {
+  padding: 0 15px;
+}
+
+.pacotes .card-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.pacotes .card-content ul li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.pacotes .card-content li svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.pacotes .card-content h1 {
+  font-size: 1rem;
+  color: #023047;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pacotes .card .card-tag-top {
+  position: absolute;
+  background-color: #fb8500;
+  border-radius: 8px 0 0 8px;
+  padding: 5px 10px;
+  margin: 20px 179px;
+}
+
+.pacotes .card .card-tag-top p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.pacotes .card .card-tag-bottom {
+  position: absolute;
+  background-color: #118ab2;
+  border-radius: 0 8px 8px 0;
+  padding: 5px 10px;
+  margin: 170px auto;
+}
+
+.pacotes .card .card-tag-bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/*SESSÃO SERVIÇOS*/
+.servicos {
+  padding: 15px;
+}
+
+.servicos .servicos-title {
+  text-align: center;
+  margin: 35px 0;
+  color: #023047;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+}
+
+.servicos .servicos-cards {
+  display: flex;
+  max-width: 950px;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.servicos .card {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+/*ícones do data-feather*/
+.servicos .card svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  transition: all 1s; /*efeito de transição que muda a cor para vermelho demorar 1seg*/
+}
+
+.servicos .card svg:hover {
+  stroke: #fb8500;
+  transform: scale(1.1); /*aumenta o tamanho do ícone (destaca)*/
+}
+
+.servicos .card h3 {
+  color: #023047;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.servicos .card p {
+  color: #212529;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.servicos .card .card-content {
+  height: 155px;
+  text-align: center;
+}
+
+.servicos button {
+  background-color: #118ab2;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 0;
+  padding: 12px 15px;
+  font-weight: bold;
+  transition: all 0.5s;
+  color: white;
+}
+
+.servicos button:hover {
+  background-color: #219ebc;
+}
+
+/*SESSÃO CONTATO*/
+/*Mapa do Google*/
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+.contato {
+  padding: 60px;
+  background-color: #fb8500;
+  position: relative;
+}
+
+.contato .contato-card {
+  width: 350px;
+  height: 300px;
+  background-color: #e9ecef;
+  position: absolute;
+  z-index: 99;
+  border-radius: 8px;
+  top: calc(50% - 150px);
+  left: calc(20% - 135px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 28);
+}
+
+.contato .contato-card h1 {
+  padding-left: 50px;
+  text-align: left;
+  color: #023047;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contato .contato-card li {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.contato .contato-card li svg {
+  width: 16px;
+  margin: 10px;
+  color: #2b2d42;
+}
+
+/* RESPONSIVIDADE */
+/*CELULAR*/
+@media screen and (max-width: 480px) {
+  body {
+    margin-bottom: 55px;
+  }
+
+  header nav ul {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 99; /*deixa o menu como prioridade, para nenhum elemento ficar por cima dele*/
+    color: white;
+    font-weight: bold;
+    background-color: #219ebc;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*Especial para o mapa*/
+@media screen and (max-width: 950px) {
+  .contato {
+    padding: 60px 0;
+  }
+
+  .contato .contato-card {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contato {
+    padding: 30px 0;
+  }
+
+  .contato .contato-card {
+    position: static;
+    margin: 40px auto;
+  }
+}
+
+/* TABLET */
+@media screen and (max-width: 767px) {
+}
